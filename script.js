@@ -5,7 +5,7 @@ import { prompt } from "./helper.js";
 // 🦁 Si `number` n'est pas un nombre ou est trop grand / trop petit (max: 100000000000000)
 // 🦁 Alors affiche "Error : number is not a number or is too big / too small (max: 100000000000000)" et quitte le programme
 // 💡 function validateNumber(number) {
-
+// j'apporte une nouvelle modif pour tester les commits
 console.log("ADDITION-MASTER ™️");
 
 console.log(`Choose an operator :
@@ -30,7 +30,18 @@ while (operator === 0) {
     operator = tempOperator;
   }
 }
+<<<<<<< Updated upstream
 
+=======
+function validateNumber(number) {
+  if (Number.isNaN(number) || Math.abs(number) > 100000000000000) {
+    return false;
+    console.log("Not a number");
+  } else return true;
+
+  process.exit(1);
+}
+>>>>>>> Stashed changes
 const firstNumber = Number(prompt("Enter the first number : "));
 
 // 🦁 Déplace la validation du nombre dans la fonction `validateNumber`
@@ -40,7 +51,13 @@ if (Number.isNaN(firstNumber) || Math.abs(firstNumber) > 100000000000000) {
     "Error : firstNumber is not a number or is too big / too small (max: 100000000000000)"
   );
   process.exit(1);
+<<<<<<< Updated upstream
 }
+=======
+}*/
+let res = validateNumber(firstNumber);
+console.log(res);
+>>>>>>> Stashed changes
 
 const secondNumber = Number(prompt("Enter the second number : "));
 
